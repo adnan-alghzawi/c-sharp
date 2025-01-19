@@ -59,9 +59,11 @@ namespace ConsoleApp1
             //int a=Console.Read();
             //Console.WriteLine(a);
 
+            /*//////////////////////////////////////*/
+
             //1 - Create console application that read string from user and print the same string
 
-            //string s=Console.ReadLine();
+            //string s = Console.ReadLine();
             //Console.WriteLine(s);
 
 
@@ -75,14 +77,14 @@ e.	Int
 f.	Const
 Then display it in console application
 
-             */
+            // */
             //double d = 5.5;
             //string s = "adnan";
-            //char c= 'A';
-            //bool b= true;
+            //char c = 'A';
+            //bool b = true;
             //int i = 5;
             //const int j = 10;
-            //Console.WriteLine(d+" "+ s + " " + c + " " + b + " " + i + " " +j);
+            //Console.WriteLine(d + " " + s + " " + c + " " + b + " " + i + " " + j);
 
 
             //3-	Define array with name car that hold more than 3 kinds on cars, then print all the cars with the array length.
@@ -130,21 +132,23 @@ Then display it in console application
 
              */
 
-            int[]arr=new int[10];
+            //int[] arr = new int[10];
 
-            Console.WriteLine("enter 10 elements");
+            //Console.WriteLine("enter 10 elements");
 
-            for (int i = 0; i < arr.Length; i++) { 
-            Console.WriteLine("enter the element of index "+ i);
-               arr[i]=Convert.ToInt32( Console.ReadLine());
-            }
-            Console.WriteLine("\n");
-            foreach (int i in arr) {
+            //for (int i = 0; i < arr.Length; i++)
+            //{
+            //    Console.WriteLine("enter the element of index " + i);
+            //    arr[i] = Convert.ToInt32(Console.ReadLine());
+            //}
+            //Console.WriteLine("\n");
+            //foreach (int i in arr)
+            //{
 
-                Console.Write(i+" ");
-            }
-            
-            
+            //    Console.Write(i + " ");
+            //}
+
+
         }
     }
 }
