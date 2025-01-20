@@ -9,8 +9,25 @@ namespace ConsoleApp2
 {
     internal class Program
     {
+        
+        //static int v(string s)
+        //{
+        //    int c = 0;
+        //    foreach (char ch in s)
+        //    {
+        //        //if ("aeiouAEIOU".Contains(ch))
+        //        //{
+        //        //    c++;
+        //        //}
+        //        if(ch=='a' || ch== 'e' || ch == 'o' || ch == 'u' || ch == 'i' || ch == 'A' ||
+        //          ch == 'E' || ch == 'O' || ch == 'U' || ch == 'I') { c++; }
+        //    }
+        //    return c;
+        //}
         static void Main(string[] args)
         {
+            //int count = v("adnan");
+            //Console.WriteLine("the vowels counter : " + count);
 
             //string greeting = "Hello";
             //Console.WriteLine(greeting);
@@ -58,6 +75,7 @@ namespace ConsoleApp2
                 Converted Int: 9
 
              */
+
             //Console.WriteLine("enter any double number");
             //double d= Convert.ToDouble(Console.ReadLine());
             //int i = (int)d;
@@ -270,18 +288,20 @@ Output: "The middle value is: 15"
 
              */
 
-            Console.WriteLine("Enter the first number: ");
-            int a = int.Parse(Console.ReadLine());
+            //Console.WriteLine("Enter the first number: ");
+            //int a = int.Parse(Console.ReadLine());
 
-            Console.WriteLine("Enter the second number: ");
-            int b = int.Parse(Console.ReadLine());
+            //Console.WriteLine("Enter the second number: ");
+            //int b = int.Parse(Console.ReadLine());
 
-            Console.WriteLine("Enter the third number: ");
-            int c = int.Parse(Console.ReadLine());
+            //Console.WriteLine("Enter the third number: ");
+            //int c = int.Parse(Console.ReadLine());
 
-            int middle = a + b + c - Math.Max(a, Math.Max(b, c)) - Math.Min(a, Math.Min(b, c));
+            //int middle = a + b + c - Math.Max(a, Math.Max(b, c)) - Math.Min(a, Math.Min(b, c));
 
-            Console.WriteLine($"The middle value is: {middle}");
+            //Console.WriteLine($"The middle value is: {middle}");
+
+
 
         }
     }
