@@ -93,118 +93,187 @@ namespace ConsoleApp3
 
 
 
-        public static string number(int num)
-        {
-            if (num % 2 == 0) { return "even"; }
-            else { return "odd"; }
-        }
-        public static int check(int num1,int num2 , int num3 , int num4 , int num5)
-        {
-            int smallest = num1;
-            if(num2<num1) smallest = num2;
-            else if(num3< num1) smallest = num3;
-            else if (num4 < num1) smallest = num4;
-            else if (num5 < num1) smallest = num5;
-            return smallest;
-        }
-        public static int factorial(int num)
-        {
-            int m = 1;
-            for (int i = num; i > 0; i--) 
-            {
-                m *= i;
-                
-            }
-            return m;
+        //public static string number(int num)
+        //{
+        //    if (num % 2 == 0) { return "even"; }
+        //    else { return "odd"; }
+        //}
 
-        }
+        //public static int check(int num1, int num2, int num3, int num4, int num5)
+        //{
+        //    int smallest = num1;
+        //    if (num2 < num1) smallest = num2;
+        //    else if (num3 < num1) smallest = num3;
+        //    else if (num4 < num1) smallest = num4;
+        //    else if (num5 < num1) smallest = num5;
+        //    return smallest;
+        //}
+        //public static int factorial(int num)
+        //{
+        //    int m = 1;
+        //    for (int i = num; i > 0; i--)
+        //    {
+        //        m *= i;
+
+        //    }
+        //    return m;
+
+        //}
 
 
 
-        public static string Prime(int num1, int num2)
-        {
-            string primes = "";
-            for (int i = num1; i <= num2; i++)
-            {
-                if (IsPrime(i))
-                {
-                    primes += i + " "; 
-                }
-            }
-            return primes;
-        }
-        public static bool IsPrime(int number)
-        {
-            if (number <= 1)
-                return false;
 
-            for (int i = 2; i * i <= number; i++)
-            {
-                if (number % i == 0)
-                    return false;
-            }
-            return true;
-        }
 
-        public static int Largest(int[] numbers)
-        {
-            int largest = numbers[0];
-            for (int i = 1; i < numbers.Length; i++)
-            {
-                if (numbers[i] > largest)
-                {
-                    largest = numbers[i];
-                }
-            }
-            return largest;
-        }
-        /*
-         •	Room Type (e.g., Single, Double, Suite)
-•	Price Per Night
-•	IsBooked (whether the room is already booked or not)
-•	HotelName = "Grand Stay Hotel";   as constant
-*/
+
+        //public static string Prime(int num1, int num2)
+        //{
+        //    string primes = "";
+        //    for (int i = num1; i <= num2; i++)
+        //    {
+        //        if (IsPrime(i))
+        //        {
+        //            primes += i + " ";
+        //        }
+        //    }
+        //    return primes;
+        //}
+        //public static bool IsPrime(int number)
+        //{
+        //    if (number <= 1)
+        //        return false;
+
+        //    for (int i = 2; i * i <= number; i++)
+        //    {
+        //        if (number % i == 0)
+        //            return false;
+        //    }
+        //    return true;
+        //}
+
+
+
+        //public static int Largest(int[] numbers)
+        //{
+        //    int largest = numbers[0];
+        //    for (int i = 1; i < numbers.Length; i++)
+        //    {
+        //        if (numbers[i] > largest)
+        //        {
+        //            largest = numbers[i];
+        //        }
+        //    }
+        //    return largest;
+        //}
+
+
         class Room
-        { 
-            public int RoomNumber;
-            public string RoomType;
-            public double PricePerNight;
-            public bool IsBooked;
-            public const string HotelName = "Grand Stay Hotel"; 
+        {
+            public int RoomNumber { get; set; }
+            public string RoomType { get; set; }
+            public double PricePerNight { get; set; }
+            public bool IsBooked { get; set; }
+
+            public const string HotelName = "Grand Stay Hotel";
+
+            public Room()
+            {
+                RoomNumber = 0;
+                RoomType = "";
+                PricePerNight = 0;
+                IsBooked = false;
+
+            }
+            public Room(int i, string s, double d, bool b)
+            {
+                RoomNumber = i;
+                RoomType = s;
+                PricePerNight = d;
+                IsBooked = b;
+            }
+            //public void print(int i, string s, double d, bool b)
+            //{
+            //    Console.WriteLine($"\nRoom Number: {i}");
+            //    Console.WriteLine($"Room Type: {s}");
+            //    Console.WriteLine($"Price Per Night: {d}");
+            //    Console.WriteLine($"Is Booked: {b}");
+            //}
+            ~Room()
+            {
+                Console.WriteLine("this is de constructor");
+            }
         }
+
         static void Main(string[] args)
         {
-            Console.WriteLine($"Welcome to {Room.HotelName}!");
 
-            
-            Room[] rooms = new Room[2];
+            Room room1 = new Room();
+            Console.WriteLine(room1.PricePerNight);//0
+            room1.PricePerNight = 10;
+            Console.WriteLine(room1.PricePerNight);//10
 
-            for (int i = 0; i < rooms.Length; i++)
-            {
-                rooms[i] = new Room();
+            Room room2 = new Room(20, "suite", 130, false);
+            Console.WriteLine( room2.PricePerNight);//130
 
-                Console.WriteLine($"\nEnter details for Room {i + 1}:");
 
-                Console.Write("Room Number: ");
-                rooms[i].RoomNumber = int.Parse(Console.ReadLine());
 
-                Console.Write("Room Type (e.g., Single, Double, Suite): ");
-                rooms[i].RoomType = Console.ReadLine();
+            //Console.WriteLine("enter room number");
+            //room1.RoomNumber = Convert.ToInt32(Console.ReadLine());
+            //Console.WriteLine("enter room type");
+            //room1.RoomType = Console.ReadLine();
+            //Console.WriteLine("enter price per day");
+            //room1.PricePerNight = Convert.ToDouble(Console.ReadLine());
+            //Console.WriteLine("isbooked ? (true / false)");
+            //room1.IsBooked = Convert.ToBoolean(Console.ReadLine());
 
-                Console.Write("Price Per Night: ");
-                rooms[i].PricePerNight = double.Parse(Console.ReadLine());
+            //Console.WriteLine("enter room number");
+            //room2.RoomNumber = Convert.ToInt32(Console.ReadLine());
+            //Console.WriteLine("enter room type");
+            //room2.RoomType = Console.ReadLine();
+            //Console.WriteLine("enter price per day");
+            //room2.PricePerNight = Convert.ToDouble(Console.ReadLine());
+            //Console.WriteLine("isbooked ? (true / false)");
+            //room2.IsBooked = Convert.ToBoolean(Console.ReadLine());
 
-                Console.Write("Is the room booked? (true/false): ");
-                rooms[i].IsBooked = bool.Parse(Console.ReadLine());
-            }
-            Console.WriteLine($"\nRoom details in {Room.HotelName}:");
-            foreach (var room in rooms)
-            {
-                Console.WriteLine($"\nRoom Number: {room.RoomNumber}");
-                Console.WriteLine($"Room Type: {room.RoomType}");
-                Console.WriteLine($"Price Per Night: {room.PricePerNight:C}");
-                Console.WriteLine($"Is Booked: {room.IsBooked}");
-            }
+            //Console.WriteLine(Room.HotelName);
+            //Console.WriteLine($"Room Number: {room1.RoomNumber}\nRoom Type: " +
+            //    $"{room1.RoomType}\nPrice Per Night: {room1.PricePerNight}\nIs Booked:" +
+            //    $" {room1.IsBooked}");
+
+            //Console.WriteLine(Room.HotelName);
+            //Console.WriteLine($"Room Number: {room2.RoomNumber}\nRoom Type: " +
+            //   $"{room2.RoomType}\nPrice Per Night: {room2.PricePerNight}\nIs Booked:" +
+            //   $" {room2.IsBooked}");
+
+
+            //Console.WriteLine($"Welcome to {Room.HotelName}!");
+            //Room[] rooms = new Room[2];
+
+            //for (int i = 0; i < rooms.Length; i++)
+            //{
+            //    rooms[i] = new Room();
+
+            //    Console.WriteLine($"\nEnter details for Room {i + 1}:");
+
+            //    Console.Write("Room Number: ");
+            //    rooms[i].RoomNumber = int.Parse(Console.ReadLine());
+
+            //    Console.Write("Room Type (e.g., Single, Double, Suite): ");
+            //    rooms[i].RoomType = Console.ReadLine();
+
+            //    Console.Write("Price Per Night: ");
+            //    rooms[i].PricePerNight = double.Parse(Console.ReadLine());
+
+            //    Console.Write("Is the room booked? (true/false): ");
+            //    rooms[i].IsBooked = bool.Parse(Console.ReadLine());
+            //}
+            //Console.WriteLine($"\nRoom details in {Room.HotelName}:");
+            //foreach (var room in rooms)
+            //{
+            //    Console.WriteLine($"\nRoom Number: {room.RoomNumber}");
+            //    Console.WriteLine($"Room Type: {room.RoomType}");
+            //    Console.WriteLine($"Price Per Night: {room.PricePerNight:C}");
+            //    Console.WriteLine($"Is Booked: {room.IsBooked}");
+            //}
 
 
             /*
@@ -213,7 +282,7 @@ namespace ConsoleApp3
 •	Output: The number 7 is odd.
 
              */
-            Console.WriteLine(number(7));
+            //Console.WriteLine(number(7));
 
             /*
              2-	Write a C# program that accepts five numbers and displays the  2nd smallest of the five.
@@ -221,14 +290,14 @@ namespace ConsoleApp3
 •	Output: 0
 
              */
-            Console.WriteLine( check(1, 2, 0, 4, 5));
+            // Console.WriteLine(check(1, 2, 0, 4, 5));
             /*
              3-	Write a program that calculates the factorial of a given number using a for loop.
 •	Example Input: 5
 •	Output: 120 (5 × 4 × 3 × 2 × 1 = 120)
 
              */
-            Console.WriteLine( factorial(5));
+            // Console.WriteLine(factorial(5));
 
             /*
              4-	Write a program that takes two integers as input and prints all the prime numbers between them using nested loops.
@@ -238,7 +307,7 @@ o	End: 30
 •	Output: 11, 13, 17, 19, 23, 29
 
              */
-            Console.WriteLine(Prime(10,30));
+            //Console.WriteLine(Prime(10, 30));
             /*
              5-	Create a program that initializes an integer array and finds the largest number in it using a foreach loop.
 •	Example Array: {3, 1, 4, 1, 5, 9}
@@ -289,7 +358,7 @@ For n = 5, the output should be:
              */
             //Console.Write("Enter the height of the pyramid: ");
             //int n = int.Parse(Console.ReadLine());
-            
+
             //for (int i = 1; i <= n; i++)
             //{
             //    for (int j = 1; j <= n - i; j++)
@@ -416,11 +485,6 @@ For n = 5, the output should be:
 
 
 
-        }
-
-        private static int largest(int[] a)
-        {
-            throw new NotImplementedException();
         }
     }
 }

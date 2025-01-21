@@ -77,7 +77,7 @@ namespace ConsoleApp2
              */
 
             //Console.WriteLine("enter any double number");
-            //double d= Convert.ToDouble(Console.ReadLine());
+            //double d = Convert.ToDouble(Console.ReadLine());
             //int i = (int)d;
             //Console.WriteLine(i);
 
@@ -156,7 +156,7 @@ namespace ConsoleApp2
 
              */
             //Console.WriteLine("enter a value in km/h you would convert it : ");
-            //double d =Convert.ToDouble( Console.ReadLine());
+            //double d = Convert.ToDouble(Console.ReadLine());
 
             //double m = d / 1.6093446;
             //Console.WriteLine(m);
@@ -169,10 +169,10 @@ namespace ConsoleApp2
 
              */
             //Console.WriteLine("enter hours : ");
-            //int i = Convert.ToInt32(Console.ReadLine())*60;
+            //int i = Convert.ToInt32(Console.ReadLine()) * 60;
             //Console.WriteLine("enter minutes : ");
             //int i2 = Convert.ToInt32(Console.ReadLine());
-            //int i3= i+i2;
+            //int i3 = i + i2;
             //Console.WriteLine("output : \"total " + i3 + " minutes");
 
             /*
@@ -226,19 +226,19 @@ Output: "Sum of digits: 6"
              */
 
 
-            //Console.WriteLine("Enter a number: ");
-            //string s = Console.ReadLine();
-            //int sum = 0;
+            Console.WriteLine("Enter a number: ");
+            string s = Console.ReadLine();
+            int sum = 0;
 
-            //for (int i = 0; i < s.Length; i++)
-            //{
+            for (int i = 0; i < s.Length; i++)
+            {
 
-            //     sum += s[i]-'0';
-            //    //int n = Convert.ToInt32(s[i].ToString());
-            //    //sum += n;
-            //}
+                //sum += s[i] - '0';
+                int n = Convert.ToInt32(s[i].ToString());
+                sum += n;
+            }
 
-            //Console.WriteLine($"Sum of digits: {sum}");
+            Console.WriteLine($"Sum of digits: {sum}");
 
 
 
