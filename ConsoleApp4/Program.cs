@@ -159,8 +159,27 @@ namespace ConsoleApp4
 	Add an auto property named Email to represent the student’s email.
 
              */
+            private int age;
             public string Name { get; set; } //property 
-            public int Age { get; set; }//property 
+            public int Age
+            {
+                set
+                {
+                    if (value < MinAge || value > MaxAge)
+                    {
+                        age = 0;
+                    }
+                    else
+                    {
+                        age = value;
+                    }
+                        
+                }
+                get
+                {
+                    return age;
+                }
+            }//property 
             public int StudentID { get; set; }//property 
             public string Email { get; set; }//property 
             /*
