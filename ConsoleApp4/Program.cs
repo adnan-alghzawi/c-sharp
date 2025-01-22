@@ -150,50 +150,42 @@ namespace ConsoleApp4
             }
         }
 
+
+
+
+
+
         class Student
         {
-            /*
-             	A property named Name of type string to represent the student's name.
-	A property named Age of type int to represent the student's age.
-	A property named StudentID of type int to represent the student's ID.
-	Add an auto property named Email to represent the student’s email.
-
-             */
-            private int age;
             public string Name { get; set; } //property 
+           
+
+            public int StudentID { get; set; }//property 
+            public string Email { get; set; }//property 
+            private int age;//field
             public int Age
             {
                 set
                 {
                     if (value < MinAge || value > MaxAge)
                     {
-                        age = 0;
+                        age = 18;
                     }
                     else
                     {
                         age = value;
-                    }
-                        
+                    }                       
                 }
                 get
                 {
-                    return age;
+                    return age;//return the field
                 }
             }//property 
-            public int StudentID { get; set; }//property 
-            public string Email { get; set; }//property 
-            /*
-             o	Add a constant named MinAge to represent the
-            minimum allowed age for a student (18 years).
-o	Add a constant named MaxAge to represent the maximum
-            allowed age for a student (40 years).
-
-             */
             public const int MinAge = 18;// CONSTANT 
             public const int MaxAge = 40;//CONSTANT
 
-            public Student()
-            {//CONSTRUCTOR
+            public Student()//CONSTRUCTOR
+            {
                 Name = "";
                 Age = 0;
                 StudentID = 0;
@@ -206,32 +198,19 @@ o	Add a constant named MaxAge to represent the maximum
                 StudentID = studentID;
                 Email = email;
             }
-
-
-            /*
-             o	Add a method named GetDetails that displays a 
-            message containing the student’s name, age, and ID.
-             */
-            public void GetDetails()// METHOD
+            public void GetDetails()// print METHOD
             {
                 Console.WriteLine($" name : {Name} \n Age : {Age} \n student id : {StudentID}");
             }
-
             ~Student()//DESTRUCTOR
             {
                 Console.WriteLine(" F I N I S H ");
             }
 
+
             static void Main(string[] args)
             {
-                /*
-                 o	Create an object from the Student class with the following values:
-	Name: "Ahmad"
-	Age: 22
-	Student ID: 1001
-o	Call the GetDetails method for the object.
-
-                 */
+                
                 Student std = new Student();
                 std.Name = "ahmad";
                 std.Age = 22;
